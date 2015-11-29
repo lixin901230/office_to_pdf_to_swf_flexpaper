@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <!-- Requirements -->
+  <test_pdf2swf>true</test_pdf2swf>
+  <test_pdf2json>true</test_pdf2json>
+  <test_mudraw>false</test_mudraw>
+
+  <!-- General Settings -->
+  <allowcache>true</allowcache>
+  <splitmode>false</splitmode>
+  <path.pdf>C:\inetpub\wwwroot\flexpaper\php\pdf\</path.pdf>
+  <path.swf>C:\inetpub\wwwroot\flexpaper\php\docs\</path.swf>
+
+  <!-- External Commands -->
+  <cmd.conversion.singledoc>pdf2swf.exe "{path.pdf}{pdffile}" -o "{path.swf}{pdffile}.swf" -f -T 9 -t -s storeallcharacters -s linknameurl</cmd.conversion.singledoc>
+  <cmd.conversion.splitpages>pdf2swf.exe "{path.pdf}{pdffile}" -o "{path.swf}{pdffile}%.swf" -f -T 9 -t -s storeallcharacters -s linknameurl</cmd.conversion.splitpages>
+  <cmd.searching.extracttext>swfstrings.exe "{path.swf}{swffile}"</cmd.searching.extracttext>
+  <cmd.conversion.renderpage>swfrender.exe "{path.swf}{swffile}" -p {page} -o "{path.swf}{pdffile}_{page}.png" -X 1024 -s keepaspectratio</cmd.conversion.renderpage>
+  <cmd.conversion.mudraw>mudraw.exe -r120 -m -o "{path.swf}{pdffile}_%d.png" "{path.pdf}{pdffile}" {page}</cmd.conversion.mudraw>
+  <cmd.conversion.rendersplitpage>swfrender.exe "{path.swf}{swffile}" -o "{path.swf}{pdffile}_{page}.png" -X 1024 -s keepaspectratio</cmd.conversion.rendersplitpage>
+  <cmd.conversion.jsonfile>pdf2json.exe "{path.pdf}{pdffile}" -enc UTF-8 -hidden -compress "{path.swf}{pdffile}.js"</cmd.conversion.jsonfile>
+  <cmd.conversion.splitjsonfile>pdf2json.exe "{path.pdf}{pdffile}" -enc UTF-8 -compress -hidden -split 10 "{path.swf}{pdffile}_%.js"</cmd.conversion.splitjsonfile>
+  <cmd.conversion.splitpdffile>pdftk.exe "{path.pdf}{pdffile}" burst output {path.swf}{pdffile}_%1d.pdf compress</cmd.conversion.splitpdffile>
+  <cmd.conversion.test>{path.swftools}pdf2swf.exe "{path.pdf}Paper.pdf" -o "{path.swf}flexpaper_test.swf" -p 1 -f -T 9 -t -s storeallcharacters</cmd.conversion.test>
+  <cmd.conversion.pdf2jsontest>{path.pdf2json}pdf2json.exe "{path.pdf}Paper.pdf" -enc UTF-8 -compress "{path.swf}flexpaper_test.js"</cmd.conversion.pdf2jsontest>
+</config>

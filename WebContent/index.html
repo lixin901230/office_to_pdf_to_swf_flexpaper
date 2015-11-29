@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Flexpaper 显示swf文件</title>
+	<script type="text/javascript" src="resource/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="resource/whaty_flexpaper/flexpaper.js"></script>
+	<script type="text/javascript" src="resource/whaty_flexpaper/flexpaper_handlers.js?1=1"></script>
+<!-- 	<link rel="stylesheet" type="text/css" href="resource/flexpaper/css/flexpaper.css" /> -->
+<!--     <script type="text/javascript" src="resource/flexpaper/js/flexpaper.js"></script> -->
+<!--     <script type="text/javascript" src="resource/flexpaper/js/flexpaper_handlers.js"></script> -->
+</head>
+<body>
+	<div style=" width:100%; height:100%; margin: 0; padding: 0; overflow: auto; text-align: center;" >
+		<div id="documentViewer" class="flexpaper_viewer" style="width: 824px; height: 760px; "></div>
+		<script type="text/javascript">
+			$('#documentViewer').FlexPaperViewer(
+				{ config : {	//SWFFile：url名称不能为中文，中文解决方案需要修改FlexPaperViewer.swf源码
+// 		            SWFFile : 'docs/项目安全检查规范.pdf.swf',
+		            SWFFile : 'docs/project_safe_check_standerd.pdf.swf',
+// 		            SWFFile : 'docs/Paper.pdf.swf',
+		            jsDirectory:'resource/whaty_flexpaper',
+		            Scale : 1,
+		            ZoomTransition : 'easeOut',
+		            Zoom:1,
+		            ZoomTime : 0.5,
+		            ZoomInterval : 0.1,
+		            FitPageOnLoad : false,
+		            FitWidthOnLoad : true,
+		            FullScreenAsMaxWindow : false,
+		            ProgressiveLoading : false,
+		            MinZoomSize : 0.2,
+		            MaxZoomSize : 5,
+		            SearchMatchAll : false,
+		            InitViewMode : 'Portrait',
+		            RenderingOrder : 'flash',
+		            StartAtPage : '',
+		            ViewModeToolsVisible : false,
+		            ZoomToolsVisible : false,
+		            NavToolsVisible : false,
+		            CursorToolsVisible : false,
+		            SearchToolsVisible : false,
+		            WMode : 'opaque',	//参数取值：Window（默认） | Opaque | Transparent，见下面注释说明
+	            	localeDirectory: 'resource/whaty_flexpaper/locale/',
+		            localeChain: 'zh_CN'
+// 		            localeChain: 'en_US'
+		        }}
+			);
+			
+			/* 
+			WMode：[Window（默认） | Opaque | Transparent]
+				Window: 	Web 页上用影片自己的矩形窗口来播放应用程序。“Window”表明 Flash 应用程序与 HTML 层没有任何交互，并且始终位于最顶层。
+				Opaque：		使应用程序隐藏页面上位于它后面的所有内容。
+				Transparent：即把FLASH背景设成透明，在网页上就可以把FLASH放到图片或者文字之上，这样可能会降低动画性能。
+			 */
+		</script>
+	</div>
+</body>
+</html>

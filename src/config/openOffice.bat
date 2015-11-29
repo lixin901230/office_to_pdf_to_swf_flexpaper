@@ -1,0 +1,1 @@
+"D:\Program_Files (x86)\OpenOffice_4\program\soffice.bin" -headless -accept="socket,host=127.0.0.1,port=8100;urp;" -nofirststartwizard

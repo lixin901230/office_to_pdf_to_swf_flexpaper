@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <!-- Requirements -->
+  <test_pdf2swf>true</test_pdf2swf>
+  <test_pdf2json>false</test_pdf2json>
+
+  <!-- General Settings -->
+  <allowcache>true</allowcache>
+  <splitmode>false</splitmode>
+  <path.pdf>C:\inetpub\wwwroot\flexpaper\php\pdf\</path.pdf>
+  <path.swf>C:\inetpub\wwwroot\flexpaper\php\docs\</path.swf>
+
+  <!-- External Commands -->
+  <cmd.conversion.singledoc>pdf2swf.exe "{path.pdf}{pdffile}" -o "{path.swf}{pdffile}.swf" -f -T 9 -t -s storeallcharacters -s linknameurl</cmd.conversion.singledoc>
+  <cmd.conversion.splitpages>pdf2swf.exe "{path.pdf}{pdffile}" -o "{path.swf}{pdffile}%.swf" -f -T 9 -t -s storeallcharacters -s linknameurl</cmd.conversion.splitpages>
+  <cmd.searching.extracttext>swfstrings.exe "{path.swf}{swffile}"</cmd.searching.extracttext>
+  <cmd.conversion.renderpage></cmd.conversion.renderpage>
+  <cmd.conversion.rendersplitpage></cmd.conversion.rendersplitpage>
+  <cmd.conversion.jsonfile></cmd.conversion.jsonfile>
+</config>

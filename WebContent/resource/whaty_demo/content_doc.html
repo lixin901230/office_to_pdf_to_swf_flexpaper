@@ -1,0 +1,27 @@
+[#assign conditions="{'params':{'itemId':'${params.itemId}'}}"/]
+[#assign result = stack.findValue('getLearnData("learnCourseItem","queryItemAndResource","${conditions}")') /]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>${(result.data.item.peWorkroomColumn.name)!""}</title>
+   [#include "/page/template/learn/blue/include/res_content.ftl"/]
+   [#assign itemId= params.itemId /]
+   [#include "/page/template/learn/common/res_learningRecord.ftl"/]
+</head>
+<body>
+	<div class="shadow">
+		<h2 class="title">${(result.data.docProperty.docTitle)!""}</h2>
+	     [#if ((result.data.docProperty.htmlPage)!"")!="" ]
+	         <div class="wdCont">
+	            [#include "${result.data.docProperty.htmlPage}"/]
+	         </div>
+	     [#else]
+	           [#assign swfURL = (result.data.docProperty.swfPath)!"" /]
+			   [#if swfURL!="" ]
+			      [#include "/page/template/learn/blue/swf_view.html"/]
+			   [/#if]
+	     [/#if]
+	</div>
+</body>
+</html>

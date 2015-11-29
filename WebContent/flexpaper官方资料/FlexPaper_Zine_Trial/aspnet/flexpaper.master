@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="flexpaper.master.cs" Inherits="flexpaper" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>FlexPaper</title>
+    <link href="admin_files/css/install.css" rel="stylesheet" type="text/css" />
+    
+    <style type="text/css" media="screen"> 
+			html, body	{ height:100%; }
+			body { margin:0; padding:0; overflow:auto; }   
+			#flashContent { display:none; }
+    </style>
+    <script type="text/javascript" src="admin_files/js/jquery.min.js"></script>
+	<script type="text/javascript" src="admin_files/js/jquery.uploadify.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="body_proxy" class="section_users section_auth section_app" style="min-height:85%;">
+    <div class="headerx logged_out" id="header">
+	    <div id="header_content">
+		    <a href="Default.aspx" class="home"><img alt="devaldi Logo" class="logo" id="devaldilogo" src="admin_files/images/flexpaper_logo.png" border=0 /></a>
+				 
+		    <ul id="nav"> 
+		    <li class=""><a href="http://flexpaper.devaldi.com/" class="home">Home</a></li>
+		    <li class=""><a href="http://flexpaper.devaldi.com/docs.htm" class="docs">Docs</a></li> 
+		    </ul> 
+	    </div>
+    </div>
+    <div id="underlay"></div>
+	    <div id="content" style="margin-top:0px;">
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+              
+        </div>
+    </div>
+    <DIV id="footer" class="clearfix" >
+	    <DIV id="footer_midbar">&nbsp;</DIV>
+	    <DIV id="company_content_container">
+	    <DIV id="global_footer" class="clearfix">
+		    <DIV id="logo_box">Devaldi</DIV>
+		         
+		    <UL style="padding-top:0.3em;padding-left:0px;">
+		    <H4><A href="http://flexpaper.devaldi.com">FlexPaper</A></H4>
+		
+		    </UL>
+		
+		    <UL style="padding-top:0.3em;padding-left:40px;">
+		    <H4><A href="http://flexpaper.devaldi.com/download.htm">Buy</A></H4>
+		    <LI style="padding-left:0px;"><A href="http://flexpaper.devaldi.com/download/">License</A></LI>
+		    <LI style="padding-left:0px;"><A href="http://flexpaper.devaldi.com/plugins.htm">Plug-ins</A></LI>
+			        
+		    </UL>
+		          
+		    <UL style="padding-top:0.3em;padding-left:40px;">
+		    <H4><A href="http://flexpaper.devaldi.com/about.htm">Contact</A></H4>
+		    <LI style="padding-left:0px;"><A href="http://www.twitter.com/flexpaper">Twitter</A></LI>
+		    </UL>
+		          
+		    <UL style="padding-top:0.3em;padding-left:40px;">
+		    <H4><A href="http://flexpaper.devaldi.com/docs.htm">Help</A></H4>
+		    <LI style="padding-left:0px;"><A href="http://flexpaper.devaldi.com/docs.htm">Tutorial</A></LI>
+		    <LI style="padding-left:0px;"><A href="http://flexpaper.devaldi.com/docs_api.jsp">API Docs</A></LI>
+		    </UL>
+			    
+		    <UL style="padding-top:0.3em;padding-left:40px;">
+		    <H4>About</H4>
+		    <LI style="padding-left:0px;"><A href="http://flexpaper.devaldi.com/about.htm">Devaldi Ltd</A></LI>
+		    </UL>
+	    </DIV>
+	    <DIV id="copyright_statement">©2010-2011 DEVALDI LTD ALL RIGHTS RESERVED.
+	    </DIV>
+	    </DIV>
+    </DIV>
+</body>
+</html>

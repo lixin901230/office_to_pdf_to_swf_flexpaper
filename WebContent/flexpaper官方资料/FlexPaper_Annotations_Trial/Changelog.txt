@@ -1,0 +1,910 @@
+April
+ » Fixed an issue where the flash viewer allowed rotation even if not in portrait mode
+ » Fixed an issue where rotation of pages were not aligning the pages in the middle properly
+ » Fixed an issue where the zoom slider was incorrectly enabled in flash mode of the annotations viewer
+ » Fixed an issue where fit width and fit height were incorrectly enabled in two page and thumb view when using the flash viewer
+ » Fixed an issue in FlexPaper Classic (HTML5) where fit height/fit width was using snapping incorrectly causing the fit width and fit height to be less expanded
+ » Native full screen now enabled for webbit based browsers on Android (HTML5/HTML4).
+   Android previously had issues with native full screeen but as this seems to be resolved we have decided to enable this
+
+
+March
+ » Fixed an issue where the "+" character in file names caused documents not to open in desktop publisher
+ » Improved the ability to load images in Zine Flash version
+ » Improved desktop publisher stability with further fallback added for previewing documents
+ » Fixed an issue where unnessecary pages would be downloaded when printing in split mode under HTML5
+ » Fixed an issue where the toolbar wasn't shown in full screen on IE9, IE8
+ » Fixed an issue where excess print margin was added to pages when printing in split mode using HTML5
+ » New preview option added for Desktop Publisher that gives you the option of using either vectors or bitmaps when previewing your publication
+   Some publications preview faster using bitmaps so we hope that having this option gives you greater flexibility
+ » Fixed an issue where opening the viewer in full screen using FullScreenAsMaxWindow wouldn't close the window if clicked again.
+   Clicking the Esc key will also exit the full screen mode
+ » Fixed an issue where it was possible to reply to marks in the annotations viewer even if the mark had been made read only
+ » Fixed an issue where pinching on Android in single page mode caused the viewer to sometimes get stuck while pinching
+ » Further improvements to the touch device pinching of the Classic viewer
+ » Fixed an issue where drawing in the annotations viewer on mozilla/firefox would cause the line to appear from the wrong end of the pen
+ » Fixed an issue where our modal window was causing warings or errors on IE8/IE9 when used together with jQuery 1.11
+ » Fixed an issue where the annotations viewer could not create marks using the asp.net scripts due to a missing column in the insert sql statement
+ » Additional checks added for MSIE to avoid panning on touch devices when using the drawing tools in the annotations viewer
+ » Fixed an issue where author name wasn't being passed on from annotations marks properly
+ » HTML5 rendering routine updated (version 1.1.1)
+ » Fixed an issue where FlexPaper was stealing focus even if the control was outside of the browser window
+
+
+February
+ » Fixed an issue where a gap was introduced between the pages in two-page mode after performing a search
+ » A number of issues related to full screen fixed for the annotations viewer
+ » 3D page turning animation speed adjusted slightly
+ » Minor page loader animation adjustments
+ » Fixed an issue where resizing the Zine HTML5 viewer when using WebGL caused pages to unload inproperly
+ » A number of minor regression issues corrected for the WebGL mode
+ » Fixed an issue where printing a page in HTML5 mode would download unnessecary pages
+ » Author field added to our HTML annotations viewer. Supplying UserCollaboration as false but setting the CurrentUser property will mark each
+   annotation with the author.
+ » Issue fixed which caused loading to fail for IE7 & IE8 in some scenarios
+ » New initial loader added for FlexPaper Zine when publishing in html5 mode. The new loader will show the first page of the publication
+ » Improved slider dot graphics in Zine HTML5 mode
+ » Fixed an issue where the book button in the toolbar for Zine in HTML5 mode wasn't indicating the mode properly
+ » Fixed an issue where switching from Zine to Portrait in the Flash flip book viewer caused the zoom to be incorrect
+ » Swiping improved on phone devices for our Classic HTML5/HTML4 viewer
+ » Corrected an issue where css styles were too widely defined in the HTML5 & HTML4 viewer
+ » Fixed an issue where switching to full screen multiple times in IE11 would cause the full screen mode to fail
+ » Fixed an issue where the bottom border of the annotations toolbar was hidden on resize
+ » Fixed an issue where clearing annotatinos was not possible in some scenarios
+ » Fixed an issue where the sub folder parameter was not passed on to the flash viewer properly
+ » Fixed an issue where quotes (') in the file names of pdf files caused the files not to open in desktop publisher
+ » Fixed an issue where zoom transition wasn't respected in HTML5 publishing mode for the flip book reader
+ » Improved responsiveness in the flip book viewer, it will now use one-page mode when viewing a publication in portrait on a touch device.
+   Switches to portrait on orientation change
+ » Fixed an issue where the size of the document viewer shrunk when switching between portrait and flip book multiple times
+ » Fixed an issue where it wasn't possible to recreate the document viewer after calling dispose
+
+
+January
+ » HTML5 rendering routine updated (version 1.0.1040 build #997096f)
+ » Improved native HTML5 rendering in iOS
+ » Corrected an issue where the Zine viewer would update the current page number incorrectly on the last page in some scenarios
+ » Our HTML5 flip book reader now features a enhanced hardware accelerated 3D mode that can be turned on from the desktop publisher.
+   This 3D mode automatically measures the graphics card and will get turned off if the performance is too low (<35 fps). The viewer will in those
+   cases gracefully degrade down to use CSS3.
+ » Improved page shadows for the HTML5 flip book viewer
+ » Fixed an issue where resizing the HTML5 flip book viewer would generate a javascript error
+ » Improved stability of the preview mode in deskto publisher
+ » Fixed an issue where tapping on a note in android caused the soft keyboard to disappear after appearing when using annotations in HTML5 mode
+ » Fixed an issue where creating a note without any note text would generate errors
+ » Fixed a regression issue where printing annotations in HTML5 mode didn't produce any annotations
+ » Fixed an issue where clicking user added images (through desktop publisher) would prevent zoom in the Zine HTML5 viewer
+ » Improved IE9 compatibility for native HTML5 rendering
+ » Fixed an issue where the FullScreenAsMaxWindow didn't work for the Zine HTML5 viewer in some scenarios
+ » Automatic link detection added for links in text that has not been created as links in the PDF document. Can be turned off and on by passing
+   the "AutoDetectLinks" parameter to the viewer or by ticking this option inside desktop publisher (under Viewer Behavior Settings).
+ » Start up screen added to desktop publisher presenting the latest news when a new version is released
+ » Fixed an issue where part of the link description was appearing in the search abstracts for our HTML5 and Flash based document viewer
+ » Ability to disable mouse wheel zooming now added to desktop publisher for our Zine HTML5 and Flash publishing mode
+
+
+December
+ » Added additional checks for documents that fail to preview in desktop publisher
+ » Issue fixed where it wasn't possible to delete collaborative annotations in Chrome under the PHP set up if using collaboration mode
+ » Fixed an issue where navigating using the left/right buttons in html5 mode for our classic viewer, in zoomed in mode caused the page to
+   unintentionally navigate to the left or right end of the page
+ » Fixed an issue where it wasn't possible to publish Vimeo videos in offline mode
+ » Fix for publishing two fold publications where FlexPaper Publisher were adjusting the last page incorrectly in some cases
+ » New HTML5 based uploader added to our server packages
+ » Fixed an issue in desktop publisher where it wasn't possible to remove links and videos in certain scenarios
+ » Fixed an issue related to entering the zoom value into the input text box of FlexPaper zine where the zoom position got miscalculated
+ » Improved initial zoom position in Safari when using Zine in HTML5 mode
+ » Improved page turning speed in Firefox for Mac OSX
+ » Improved rendering quality at high zoom levels for the HTML5 Zine viewer
+ » Tighter security checks against XSS spoofing exploits added for the Adobe Flash version (extra thanks to Francisco Alonso)
+
+
+November
+ » Fixed an issue related to next / previous buttons getting disabled in certain scenarios under iOS
+ » Improved annotations support in full screen mode for iOS8
+ » Corrections to the HTML5 annotations viewer for loading differently sized pages in MixedMode
+ » A number of minor UI corrections for search abstracts in HTML5 & HTML4 mode
+ » Fixed an issue where links in iOS phone devices had their links truncated in certain scenarios
+ » Fixed an issue where links in iOS devices caused the pages to blur when zooming in in some scenarios
+ » Improvements for desktop Safari 7.1
+ » Improvements in desktop publisher for OSX Yosemite
+ » Ability to disable zooming into publications now added to Desktop Publisher
+ » Retina support added for desktop publisher and default rendering mode switched to GPU
+ » Artwork updated for our different viewers
+ » Correction for Windows Phone where it wasn't getting the correct user interface for Zine
+ » Vimeo video support added to desktop publisher (Zine and Classic, both Flash and HTML5 mode)
+ » New flat material style icon set for Zine! We hope you like it!
+ » Issue fixed where links close to each other were not exported properly
+ » Big performance improvement in converting documents on Windows for Destkop Publisher
+
+
+August/October
+ » Issue fixed related to collaborative annotations where the notes property of marks would cause a javascript error in certain configurations.
+ » Our HTML4 and HTML5 rendering modes now feature full support for printing annotations
+ » Improved fallback mechanisms for desktop publisher on problematic PDF documents
+ » Our HTML5 and HTML4 viewers now support dragging in annotations mode with correct cursors
+ » Fixed an issue where links were incorrectly positioned in html5 mode after resizing the browser
+ » Fixed an issue where the author name of a note in the annotations viewer was unintentionally repeated
+ » Fixed an issue where the ' character caused an error in the annotations viewer
+ » Fixed an issue where the confirmation dialog deleting an annotation appeared twice
+ » Fixed an issue where documents with upper and lower case characters of file extensions were ignored in asp.net
+ » Del key keycode now working to delete annotations in the annotations viewer
+ » The HTML5 and HTML4 viewer now exits full screen if fullscreen button is pressed in full screen
+ » Issue fixed where IE was causing a unintentional repeat of the author name in the annotations viewer
+ » Improved full screen sizing for the HTML5 / HTML4 viewer to avoid cutting the toolbar off in certain sizes
+ » Search panel adjusted to avoid covering the annotation tools
+ » Fixed an issue wher the refreshMarks method wasn't clearing out old annotations properly in HTML4 and HTML5 modes.
+ » Fixed an issue where it wasn't possible to set focus on the search text field in the customizable build for annotations
+ » A number of minor issues corrected in our HTML5 and HTML4 annotations viewer
+ » You can now add phone numbers to your publications in FlexPaper Desktop Publisher
+ » New event triggered in FlexPaper Zine when a user clicks one of the social share buttons ("onSocialMediaShareClicked")
+   with the name of the social media as argument
+
+
+July
+ » Fixed an issue related to twitter modal windows conflicting with the modal window rule in flexpaper.css
+ » Ability to disable and enable page shadows in Zine publications added to desktop publisher for both Flash and HTML5
+ » Fixed an issue where the Reply button wasn't initially fully visible in flash mode when using collaborative annotations for some zoom levels
+ » Fixed an issue where the tooltip wasn't correct when using the flash annotations viewer in collaboration mode
+ » Fixed an issue where printing the current page in flash  mode would hide the annotations after completion
+ » Fixed an issue where the reply button would be visible in print when using collaborative annotations in flash mode
+ » Improved publishing speed in desktop publisher
+ » Fixed an issue where minimising an empty annotation in flash mode would cause an incorrect dialog to appear about deleting the annotation
+ » Performance adjustments for desktop Safari on OSX (HTML5 mode)
+ » Improved mouse wheel scrolling support for FireFox and fixed an issue where mouse wheel scrolling in Chrome version 36 and higher would cause the viewer to get out of position
+ » Corrected an issue where the drawing cursors were not enabled in the annotations viewer for MSIE 10 and higher
+ » New method: refreshMarks method to the annotations viewer. Refreshes all annotations on all visible pages (accessed using $FlexPaper('documentViewer').refreshMarks())
+ » Printed range added to the onDocumentPrinted event
+ » Fixed an issue where differently sized pages would not load properly in HTML5 single file mode
+ » Fixed an issue where the drawing color wasn't being set properly in the annotations viewer when using sticky mode
+ » Fixed an issue where the annotations viewer was not including note property properly in onMarkCreated and onMarkChanged events for some scenarios
+ » Fixed an issue where the android soft keyboard was not hiding properly when leaving focus on text notes in the annotations viewer
+
+
+June
+ » Regression issue fixed where the viewer wouldn't download the full publication in some scenarios even if provided (Zine)
+ » Issue fixed where the hide/show annotations were not calling hide/show properly in the customizable annotations build
+ » 'forceSinglePage' will now work on desktop as well as mobile mode of the html5 viewer. Please note that the bottom thumb nails will
+   not be visible with this turned on.
+ » FlexPaper classic flash version will now use the supplied JSON file (if any) to generate links with better accuracy. It will also precache
+   JSON files to improve search speed
+ » Correction where onCurrentPageChanged didn't fire properly on touch based devices when using the page number input box
+ » Further checks added to next() and previous() in the HTML5 viewer to avoid spamming with events
+ » Corrected an error related to displayFormat not being set properly when creating associative annotations
+ » Improved checks for avoiding asp.net to fork too many processes in split mode
+ » Improved the ability for Safari on desktop to zoom using transform scale in HTML5
+ » The aspnet package for our annotations viewer has been updated and a few issues fixed
+ » Alternative export option added for images in desktop publisher. It uses the SWF file format to export to PNG. Enable it under the
+   conversion settings in desktop publisher
+ » onPageLoaded event added to the HTML5 viewer
+ » Improved responsiveness to the toolbar in the annotations viewer for small touch devices (such as the iPhone)
+ » Issue fixed where IE10 and below would draw associative lines in HTML5 mode for the annotations viewer incorrectly
+ » Fixed an issue where onMarkDeleted was not triggered when using the api for the HTML5 annotations viewer
+ » Further checks added for new annotation marks being added to the HTML5 viewer in order to avoid duplicates in very specific scenarios
+ » Added a missing swfsize query script for our ASP.NET annotations set up package
+ » Fixed an issue where the HTML5 viewer would return the note in note marks as a XML object as opposed to a string when using collaborative mode
+ » Fixed an issue where some annotations would not update properly in HTML5 mode when using the ASP.NET sample scripts
+ » Fixed an issue where collaborative annotations were not recreated properly in HTML5 mode for some server side scripts
+ » Fixed an issue where marks in collaboration mode would sometimes cause a jQuery error to be trown
+ » Improved sharpness of HTML5 rendering in both Classic and Zine
+ » HTML5 rendering routine updated (version 1.0.441 build #0ac8380)
+ » Issue related to using odd number of backslash characters in flash mode of our annotations viewer fixed
+ » Issue related to the print and cancel print button of our html5 viewer fixed where it would cause incorrect navigation in some scenarios
+ » Issue fixed where StartAtPage was not passed through properly in the Flash customisable classic viewer for some scenarios
+
+
+May
+ » HTML5 rendering routine updated (1.0.117 build #6a800eb)
+ » Issue fixed where the mouse wheel handler for flexpaper classic in flash mode caused repositioning issues
+ » Small corrections to the flat design of the annotations viewer
+ » It is now possible to adjust the flip speed for the page transition in FlexPaper Zine from desktop publisher (under Publication Settings)
+ » Issue corrected where cancelling the print dialog didn't cancel the print when printing in flash using split mode
+ » Issue corrected where it wasn't possible to select existing selection annotations in certain scenarios
+ » The annotations viewer in flash mode now adjusts the font size of notes so that they are always readable even when zooming out
+ » Our annotations viewer now supports collaborative notes. Setting the following parameters enables collaboration between users in notes
+   {
+     UserCollaboration : true,
+     CurrentUser : 'Username'
+   }
+ » Issue fixed where printing using flash in some browsers caused the print dialog to stay after the print completed
+ » Issue fixed where the viewer would not resize to fill screen in full screen mode when using the FlexPaper classic customizable build
+ » Issue fixed where FlexPaper would steal focus incorrectly in IE11 and below
+ » PHP scripts updated to use readfile for binary files to avoid encoding issues for certain environments
+ » Fixed an issue where some annotations with associations were not deleting their associated objects properly in flash mode
+ » Added extra visibilty for the scrollbar in webkit
+
+
+April
+ » Additional checks added to avoid complex documents from timing out when being opened inside desktop publisher
+ » Issue fixed for the annotations viewer where single page documents could not get associative selections
+ » Issue fixed where desktop publisher was adding "http://" to "https://" links unintentionally
+ » Issue fixed where editing a link in desktop publisher caused the link to blank out unintentionally
+ » Issue fixed where it was possible to delete annotations set to read only when in HTML4/HTML5 mode
+ » Issue fixed where full screen wasn't working in older (IE9 and below) when using the customizable HTML4 viewer
+ » Issue fixed where some annotation markers (notes with points) were double-painted incorrectly
+ » Issue fixed where switching back and forth between portrait and flip book mode caused the viewer to hang when using Zine in HTML4 and HTML5
+ » Issue fixed where it wasn't possible to remove an added image in desktop publisher in some scenarios
+ » Issue fixed where the drawing tool was not reset properly when switching between tools in the annotations HTML5 pdf viewer
+ » Various regression issues fixed for IE9/IE10 in the HTML4/HTML5 rendering modes
+ » Additional checks added for refreshing the search abstracts in HTML5 mode when changing search term
+ » Issue fixed where using IE8 in HTML mode was causing some pages to unload incorrectly for some scenarios
+ » Issue fixed where thumb headers were visible in Zine flash mode when switching to portrait for some scenarios
+ » Issue fixed where IE8 and below were not loading links properly in BookView mode for Zine (when using HTML rendering)
+ » Issue fixed where annotation notes in read only mode were editable in some specific scenarios for the HTML4/HTML5 viewer
+ » Issue fixed where onCurrentPageChanged was fired on touch devices when swiping past the last page for some scenarios
+ » Issue fixed on visibility of the highlight function in HTML5/HTML4 mode
+ » Issue fixed where the comment/text association tool wasn't getting deselected properly
+ » Adjustments to how the annotations viewer refits the page after zooming back out again on touch based devices
+ » Improved retina icon set added for the flat UI design in mobile
+ » Issue fixed where sharing a publication through twitter,facebook,linkedin or tumblr caused the viewer to always be shared in miniature mode
+ » Issue fixed where the document name would not be properly tracked in Google Analytics for some specific scenarios
+ » Issue fixed where searching documents in single file mode in HTML5 caused errors in some cases
+ » Fixed an issue where the drawing canvas would not be enabled when scrolling down the document in HTML5 mode for the annotations viewer
+ » Additional optimizations for disposing the viewer in all modes
+ » Small corrections to overflow of the classic viewer to avoid extra scroll bars in some scenarios
+ » Issue fixed for Android where the device was incorrectly identified if using the Dolphin Browser
+ » Issue fixed where old versions of Safari were using the BookView mode instead of the supplied mode in FlexPaper Classic
+ » Improved fallback on when failing to draw images with mudraw in desktop publisher
+ » It is now possible to configure the alpha level of links (from 0 to 100%) in desktop publisher
+
+
+March 2014
+ » Compatibility changes to the FlexPaper html5 & html4 viewers to make them fully compatible with Twitter's bootstrap framework.
+ » Improved pinch/zoom support for Android devices in Classic viewer
+ » Issue fixed where IE 10+ would fail to use worker threads in some scenarios causing the viewer not to render properly
+ » Extra checks added to the Zine flash & HTML5 viewer to avoid texts from appearing in search abstracts that were not part of the visible area of a publication
+ » Korean and Japanese language translations added
+ » onDocumentLoaded event correction for Flash Zine viewer
+ » Additional security checks for search engine indexing scripts added
+ » Fixed an issue related to signing and password protecting documents when in flash mode
+ » Improved PHP version compatibility with our password & signing scripts for desktop publisher
+ » Social sharing now disabled by default. Can be enabled through the desktop publisher style menu
+ » Issue fixed where links were not repositioned properly when going into full screen in Zine when using HTML5 and HTML4 for some scenarios
+ » Issue fixed where onCurrentPageChanged was not fired properly in FlexPaper classic on touch devices when wiping left and right
+ » Regression issue fixed where IE9 would use an incorrect canvas library version in the annotations viewer
+ » Issue fixed in our classic viewer where the full screen mode would not resize the viewer properly if percent had been used in the style attribute of the viewer container
+ » Issue fixed where removing annotations would not work in some scenarios through the API if only id is supplied
+ » Further optmizations on how events are unbound when disposing the viewer
+ » Height adjustments to our UI customizable annotations viewer to better fit with actual specification
+ » Improved consistencies between flash and html5 for annotations when using Sticky Tools
+ » Improved positioning of controls in the customizable annotations viewer
+ » Print dialog in HTML5 viewer now defaulting to English if the locale isn't found
+ » Size corrections for swipe detections on phone devices in our classic viewer
+ » onDocumentLoaded now fired in split mode accross the viewers. This should make binding annotations easier to handle
+ » Fixed an issue in our flash viewer where notes could not be dragged properly in split mode on some pages
+ » It is now possible to allow the image to be changed when a user is hovering an image in FlexPaper Zine. This setting can be done in dektop publisher (add image button)
+ » Issue fixed in desktop publisher where modifying an image in some steps would cause an extra image to be added
+ » Split functionality implemented for our java package (for the HTML5 rendering mode)
+ » Issue fixed where it wasn't possible to annotate over links in HTML5 mode in some scenarios
+ » Link color corrected for Flexpaper Classic
+ » Issue fixed where the text layer was incorrectly unloaded when scrolling fast in some scenarios
+ » Issue fixed where firefox was firing an error when clicking on the highlight button in HTML5 mode when using annotations
+ » Issue fixed where clicking on the zoom slider's slider did not result in zooming into the document
+ » Desktop Publisher now allows settings from old publications to be imported including link, video and image elements. It does not save these elements when saving
+   settings as a template
+ » HTML5 rendering routine updated (0.8.1277 build #cebf783)
+ » Minor build issues corrected in the ASP.NET sample scripts for the customizable classic viewer
+ » Fixed an issue where some publications would be incorrectly cropped to include bleed in HTML5 mode and size optimizations for Zooming into HTML5 publications in MixedMode
+ » Fixed an issue where link highlighting would not highlight links when rolling away from them
+ » Fixed an issue where many links to a page could cause some links to be incorrect in size
+ » Improved support for Android pinching in FlexPaper Classic
+ » Safari 7 and above now uses zoom transitions. The early versions of Safari 7 had issues with this but this seems now to have been resolved by Apple and this can therefore
+   be enabled again
+ » Our alternative flat design has been included in our customizable annotations build
+ » Fixed an issue where the viewer was unintentionally stealing focus in Internet Explorer 
+ » Optimizations and fixes for highlighting (the .highlight method) in HTML5 mode
+
+
+February 2014
+ » Rendering quality for the HTML5 mode improved for Firefox in OSX
+ » Issue fixed where custom links, videos and images would appear incorrectly positioned in mixed size publications when viewing the publication in HTML5 mode
+ » Issue fixed where the Portrait mode would start on the wrong page in some scenarios
+ » Multiple viewer instances now fully supported in FlexPaper Zine
+ » New parameter added for enabling/disabling search abstracts (EnableSearchAbstracts)
+ » Printing the Current page in Zine now prints both visible pages. It was previously only printing one of them
+ » Mouse wheel scrolling area increased in the HTML5 and HTML4 mode for Zine
+ » Issue fixed where creating links,images or videos by creating selections from bottom to top were creating incorrect sizes for the elements
+ » Issue fixed added images would not appear in preview of the publication in Desktop Publisher
+ » Issue fixed where using strikeout and then the note tool would create unintentional strikeouts when having StickyTools turned on
+ » Issue fixed where it wasn't possible to rotate the next to last page in the flash viewer
+ » Correction so that FlexPaper AdaptiveUI classic non-customizable uses the right toolbar in touchable laptops
+ » Adjustments to how the viewer is resized when reloaded using the $FlexPaper('documentViewer').load() method
+ » Offline publishing now available to unlimited license holders. Commercial license holders will be able to register a key for offline publishing during February.
+ » Issue fixed where last page was inaccessible in SinglePage mode when using HTML4/HTML5 rendering
+ » Issue fixed where the search marker in Zine HTML4/HTML5 mode would be appended and widened if the search result was clicked more than once
+ » Improved ability to allow Google to index your publication from within Desktop Publisher. Expand the advanced settings in the "Publish & View" dialog to access
+   new options for controlling this
+ » Printing quality improved for printing in HTML5 mode
+ » Small corrections to the signing php scripts to avoid mishandling headers on certain configurations
+ » Small corrections for how touch based devices use Portrait or SinglePage mode when starting up in HTML4/HTML5
+ » Small corrections to the asp.net set up package
+ » Hint text for Download PDF added
+ » Fixed an issue where getCurrPage() wasn't returning the correct page when using Zine in HTML4/HTML5 mode for some scenarios
+ » Social network sharing dialog added to FlexPaper Zine. Publications can now be easily shared to Twitter, Facebook, Tumblr and LinkedIn and embedded on any site
+ » Progress info added to the print dialog when printing in split mode using Adobe Flash
+ » Fixed an issue where the onCurrentPageChanged event would not fire in Zine when using HTML5 mode in portrait
+ » New method ("getCurrentRenderingMode") added for Zine returning either flash,html or html5 depending on what is being used
+ » Mouse wheel scrolling improved for Zine & Classic in webkit based browsers when using the Flash rendering mode
+ » Improved zooming motion into Zine flash publication so that it zooms into where the user clicks
+ » Issue fixed where searching when in zoomed in mode on touch devices caused pages to render incorrectly in some scenarios for FlexPaper Zine
+ » Tweaks to mobile browsers as to which uses native scrolling and which that does not
+
+
+January 2014
+ » Issue fixed where some 1-page documents would fail to load in IE8 when using HTML mode
+ » Adjustments to image quality in publishing to Flash from desktop publisher
+ » PDF2JSON updated to escape all control characters and version bumped to 0.68
+ » Mouse wheel zooming now tracks the mouse movements in Flash and HTML5 mode of FlexPaper Zine
+ » Read only mode now possible to set through the UIConfig file in Zine. Desktop Publisher also made more clear about where to find this mode
+   Trial users of Desktop Publisher are now also able to try this mode.
+ » Missing retina icons included in Desktop Publisher for Windows
+ » Classic viewer improved to use the supplied thumbnail images
+ » Accuracy of navigation improved in thumb view mode for the classic viewer to avoid unintentional clicking on thumb nails
+ » Issue fixed where links on single page PDF documents were mispositioned in HTML5 format
+ » Issue fixed in desktop publisher where desktop publisher will retry if some of the party libraries would crash during conversion
+ » Issue fixed where PDF file names in brackets ([,]) would not convert in desktop publisher
+ » Issue fixed where Safari version 4 and below would not display the thumbnails in Zine mode properly
+ » Issue fixed where going into true full screen twice in a row in Classic Customizable build caused the viewer to resize improperly
+ » Issue fixed where landscape documents would not display thumb nails in correct proportions when using HTML5 mode in IE version 9
+ » Issue fixed where the current search match would disappear when scrolling through the Classic viewer in HTML4/HTML5 mode
+ » Issue fixed where links,video and images would not be repositioned/resized properly if the viewer was resized or repositioned in HTML5 mode
+   while using the flip book mode
+ » Issue fixed where images added to our flip book viewer would be incorrectly loaded in some scenarios when using the flash viewer
+ » Issue fixed where manually added "mailto:" links would open as http:// links in Flash and HTML5
+ » A first version of highlighting using Adobe XML added to API for the HTML4/HTML5 viewer
+ » Support for mail address links added to Desktop Publisher
+ » All locale settings now fully supported in FlexPaper customizable classic
+ » It is now possible to bind links to images in desktop publisher when using the add link button
+ » Earlier versions of Safari (below 5) are now supported in the HTML4 mode
+ » Desktop Publisher now exports hidden text as well to better support OCR scanned documents
+ » A first version of offline publishing added to FlexPaper Desktop Publisher for Zine. We will be rolling this out to unlimited license holders initially.
+   Offline publishing is counts as a domain and 1-domain license holders will need to purchase an additional license if they want to be
+   able to publish documents offline. Only one extra license is needed to make unlimited number of offline publications.
+   Desktop Publisher for FlexPaper Classic will be getting this functionality in February.
+ » HTML5 rendering routine updated 0.8.894 (build #ac91047)
+
+
+December 2013
+ » Issue fixed where performing a search in FlexPaper Zine flash followed by switching into a different view would cause the viewer not to show
+   the document
+ » Improvements to the annotations build making the note widget easier to resize on touch devices
+ » Issue fixed where a selection from a lower point to a higher point would create an incorrect annotation mark in the Classic Annotations viewer
+ » Issue fixed where it wasn't possible to select text inside annotation notes on iPad
+ » Issue fixed where annotations would not be repositioned properly on resize of the browser window in HTML5 mode
+ » Regression issue fixed where the annotations viewer would not resize on rotating a device
+ » Fixed an issue related to external urls missing the leading "http://" which would not work in the flash mode of Zine
+ » Optimizations for landscape documents in Flash mode within FlexPaper Zine
+ » Issue fixed where publications with their thumbnails hidden in Zine would in some scenarios not show in IE10
+ » Fisheye thumbnails improved for Zine in IE9 and IE10 when using FlexPaper in flip book mode with rendering mode set to HTML4 or HTML5
+ » Mouse wheel support added for Zine (when viewing your publication as a flip book)
+ » Issue fixed where fisheye thumbnails in Zine would appear in full screen even if turned off if the viewer was using PreviewMode.
+   This was affecting the flash viewer only
+ » Validation of documents containing non-JSON (non printable, control characters) compatible characters further improved in Desktop Publisher
+ » Improved accuracy of selections in HTML4 and HTML5
+ » FlexPaper in HTML5 mode now allows documents to be loaded from a Uint8Array. An example of how this is done will be posted on our blog.
+ » Improved android pinching support in FlexPaper flip book mode
+ » Rendering quality further improved for Android devices in flip book mode
+ » Rendering quality further improved for iOS retina devices in flip book mode
+ » Issue fixed where Zine would zoom unintentionally when dragging the corners of the pages in HTML5 and HTML4 mode
+ » Links will now give a link hint when hovering a page in Zine in both Flash and HTML5
+ » New Zine style property: Link color. Use this to set the desired link color in your publications
+ » Issue fixed where the mobile preview in Desktop Publisher would respond to single clicks as opposed to double clicking which is what mobile devices
+   do
+
+
+November 2013
+ » Search abstracts added to the FlexPaper Classic viewer
+ » New flat design implemented for FlexPaper Classic customizable build
+ » Page loader position corrected in FlexPaper Classic
+ » Touch/wipe regression issue corrected for FlexPaper Classic
+ » New init view mode added for touch devices. Supplying "TouchInitViewMode" will use the supplied view mode for touch
+   only devices such as tablets, phones. If nothing is supplied then the viewer will assume "SinglePage" for tablets/phones.
+ » Touch/swipe improved in SinglePage mode for FlexPaper Classic
+ » +/- buttons now zooming on touch devices too, were previously using fit width/fit height
+ » Pinch/Zoom for SinglePage mode on touch devices improved
+ » Margin adjustments to annotation tool bars
+ » Mixed Mode (optimized HTML5 loading) added to modes: 'Portrait', 'TwoPage', 'BookView' and 'ThumbView'. Split mode is required to take advantage of MixedMode.
+ » Issue related to loading document files across domains in Flash split mode fixed
+ » Issue fixed related to loading different size documents in Flash (Portrait mode) where the resulting page would be
+   too large (causing extra white space around the page)
+ » Issue corrected where pages were not being unloaded properly in some scenarios for the HTML4 portrait and single page rendering mode
+ » Fixed an issue where the selectable text would not be added properly when using split mode in TwoPage and SinglePage for the HTML4
+   rendering mode
+ » Minor corrections for the HTML4 mode when using the Flip Book mode.
+ » PDF2JSON updated to version 0.66 improving with the ability to fully describe external links
+ » Issue fixed where link hints (hovering over a page) in HTML5/HTML4 mode would not be removed when rolling out of the page
+ » New publication preview mode added which shows the front page of the publication with a clickable arrow.
+   Set the 'PreviewMode' parameter to 'FrontPage' to use this new mode. The parameter 'PublicationTitle' can also be set in conjunction
+   to this which will display a title for the publication if set.
+ » Issue fixed where onCurrentPageChanged was not being fired in Portrait when using Zine (the turn page/flip book) in flash mode
+ » Retina rendering mode for iPad in Zine improved further in performance in particular as to how dom elements are created
+ » Publication preview can now be configured in the style section inside FlexPaper Desktop Publisher
+ » Fixed an issue where certain links would not be clickable in very specific scenarios when using FlexPaper flash in flip book mode
+ » Various performance optimizations
+ » Improved dispose method for Zine in HTML5/HTML4 mode as some references to events were still undisposed after calling dispose
+ » Reduced memory footprint on the flip book in HTML5 and HTML4 mode
+ » onDocumentLoadedError now supplying error text in HTML4 & HTML5 mode
+ » CSS performance improvements from removing unnessecary > * selectors
+ » Improved security restrictions for how documents are loaded in our PHP/ASP.NET/JAVA examples
+ » onInitializationComplete event added which fires when the viewer has initialized
+ » Issue fixed for the annotations bottom toolbar on touch based devices
+ » Issue corrected related to not being able to draw on visible pages on iOS7 devices in some scenarios
+ » Slight corrections in relation to touch support for iPad (HTML4/HTML5) mode when viewing the document in portait mode
+ » Issue fixed where certain user defined links would not appear properly in Zine (HTML4/HTML5 mode)
+ » Fixed an issue where the Zine viewer in HTML4/HTML5 mode would shrink too much when resizing the window
+ » FlexPaper Desktop Publisher now escapes all non-ascii characters (for example, 'å' becomes '\u00e5') becomes when exporting
+   JSON files which will help in making more PDF files IE7 compatible when using the HTML4/HTML5 modes
+ » Issue fixed where PDF files would not be downloadable in Zine flash version even if the download icon had been included
+ » Issue corrected in a scenario where setting MaxZoomSize caused viewer not to be able to zoom when using Zine in HTML5/HTML4
+ » Issue corrected where slider input controls in desktop publisher were not initialized properly
+ » New style property added to FlexPaper Zine: ability to turn stretching of background on or off
+ » Fixed an issue where custmo background color was not being set properly for tablet devices in Zine
+
+
+
+October 2013
+ » Touch support added for iPad in HTML4/HTML5 portrait mode
+ » FlexPaper Zine iPad version enhanced to support higher resolution for touch devices when zooming into the document (requires PHP & GTK2)
+ » Issue fixed relating to certain links where they would be incorrectly broken up into sections causing the links to be incomplete when clicked (HTML4/HTML5 mode)
+ » Issue fixed for annotations in IE9 when using the HTML rendering mode
+ » Last/first navigators added for Zine in HTML4/HTML5 mode
+ » FlexPaper Zine Icons added for retina/HD desktop displays (labelled [name]@2x.png)
+ » Corrections for hidden text and control characters in exporting to HTML4/HTML5 from desktop publisher [on Windows]
+ » Correction for shading in Zine for HTML5/HTML4 (regression issue from 2.1.7)
+ » Fixed an issue relating to drag-turning pages in HTML4/HTML5 where the viewer would zoom in unintentionally in some specific scenarios
+ » Fixed an issue related to links being created multiple times causing performance degradation in HTML4/HTML5 mode for Zine
+ » Performance improvements to sliding and dragging in Zine HTML4/HTML5
+ » HTML5 Fisheye thumbnails performance improvements
+ » The Viewer is now giving the clicked/tapped page in Zine rendering priority to improve performance while reading
+ » Links and custom links made more visible in HTML4/HTML5 mode
+ » Regression issue corrected for Zine in relation to loading new documents through the load({PDFFile : 'filename.pdf'}); API
+ » Fixed an issue related to thumbnails showing up incorrectly when in Zoomed in mode in HTML5 mode and resizing the browser window
+ » Desktop Publisher now tries to repair PDF files that it fails to publish on first attempt
+ » Youtube videos when played in HTML5 viewer will now stop if playing when navigating away from the page
+ » Desktop Publisher now able to sign documents and add password protection for your PDF documents to prevent them from being downloaded
+ » Issue fixed related to searching for two different phrases causing the search abstracts not appearing the second time in Flash mode for Zine
+ » HTML5 PDF rendering routine updated (0.8.633 build # fa03a77)
+ » Full screen support added for IE 11 to our HTML4/HTML5 pdf viewer
+ » Support for Android in pinch and zoom plus navigation improved for Zine in flip page mode
+
+
+September 2013
+ » Issue fixed for Firefox on Mac where zooming into Zine could cause the browser to 'wiggle'
+ » Issue fixed related to disabling/removing the number of pages field in FlexPaper Zine (flash mode)
+ » Fixed an issue related to the new PreviewMode where thumb nails would not appear after going into full screen
+ » Quality and performance improvements for the HTML5 MixedMode
+ » Fixed an issue related to IE and the fisheye thumb nails in Zine HTML mode
+ » Improved shading in Zine HTML4/HTML5
+ » Improvements to the wordpress plugin to be fully compatible with the latest version
+ » Issue fixed where videos and links would not rescale when going into full screen for Zine in HTML4/HTML5 mode
+ » Desktop Publisher has now been set not to copy FlexPaperViewer.swf to output directory if the flash has not been selected as output format.
+ » Drop shadow effects added to Zine in HTML4/HTML5
+ » Issues fixed for Windows 8 based touch PCs which were using the mobile user interface incorrectly
+ » Memory optimizations for Zine in HTML5 mode
+ » Rendering flickering reduced in HTML5 for Zine
+ » Dual rendering mode disabled when using MixedMode as it has been concluded that split mode works better together with MixedMode to
+   deliver the sharper focused file as quickly as possible
+ » Issue related to mouse origin when using zoom slider in Zine HTML5 mode fixed
+ » Issue fixed for Zine in HTML5 mode where documents which are wider than they are high would render their 'fish eye' icons incorrectly
+ » Major update to our Wordpress plugin with automatic conversion of documents
+ » Issue fixed for publisher to avoid keyboard handlers to interfere with user input
+ » The ability to save style settings as new templates in Desktop Publisher added
+ » Caching improved for various scripts in the HTML5 viewer
+ » Pinch to zoom support added for Android devices in Zine
+ » Issue fixed for resizing Zine in Portrait on iPad devices where extra margin was added to the bottom of the viewer
+ » Tablets and phones now have their own configuration sections in UIConfig so that icons can be better added in regards to the display
+ » Corrections default phone vs tablet icons in Zine
+ » Initial position for page 1 corrected for Zine in HTML5/HTML4 mode so that it starts in middle when in two page view
+ » Fixed an issue related to printing split PDF documents where unnecessary pages were being loaded
+ » Fixed an issue related to hovering and dragging lower corners when fisheye is activated in Zine (HTML5/HTML4 mode)
+
+
+August 2013
+ » Issue fixed related to scrolling in portrait on mobile devices where page number was not being updated properly in some scenarios
+ » FlexPaper Publisher now better optimizes output of image files and converts PNG to JPEG for better compression. Sizes of publications
+   will be greatly reduced because of this
+ » FlexPaper Publisher now automatically splits two-fold publications into individual pages.
+ » Changes to "image quality" now also affects the output of the HTML mode
+ » FlexPaper now supports a "dual" mode for rendering documents in HTML5 mode. This mode uses either split mode or single page
+   mode for HTML5 depending on if the server and the browser supports range-requests or not. The following example shows how to use the
+   dual mode manually (please note that JSON file needs to be supplied for the split mode to work in HTML5):
+   PDFFile : "pdf/Paper_[*,2,true].pdf",
+ » HTML5 PDF rendering routine updated (0.8.335 build # 6c6719e)
+ » The HTML5 rendering mode now supports worker threads when using the HTML5 mode in single file mode
+ » Major performance improvements for the HTML5 rendering mode
+ » Zine loader animation updated and improved so that it shows up more quickly when turning a page
+ » Issue fixed (regression) related to selecting text in portrait mode for the flash rendering mode when loading in split mode
+ » Issue related to using StickyTools and annotations on iPad corrected
+ » Issue related to opening the classic customizable viewer in full screen using IE older than version 10 fixed
+ » Adjustments to the thumbnails in Zine for the HTML4/HTML5 rendering mode
+ » Issue Fixed for true full screen in some webkit browsers
+ » Improved performance for the HTML4 rendering mode
+ » New introduced "MixedMode" parameter allowing the HTML5 rendering mode to use images when the zoom scale is small enough for the image
+   to deliver better quality faster. Currently only available in Zine but will be propagated to Classic as well.
+ » New miniature mode parameter "PreviewMode" added for Zine allowing the viewer to be displayed in a miniature fashion without
+   toolbars and thumbnails. The viewer will go to full screen when clicked on in this mode.
+   See http://flexpaper.devaldi.com/examples/usecases/Education/Education_page_flip.jsp for an example of this
+ » Issue fixed for FlexPaper Zine Flash to make thumbnails rerender in larger size when entering fullscreen
+ » Issue fixed for FlexPaper Zine HTML4/HTML5 mode where thumb nails would be unresponsive to mouse over after resizing the control
+   in firefox
+ » The clicked "Zoom in" position improved for Zine HTML4/HTML5
+ » Issue fixed for Zine related to the StartAtPage parameter in HTML4/HTML5 mode
+ » Hardware acceleration now enabled for Safari on desktop for Zine in HTML4/HTML5 mode
+ » Issue fixed for Zine where a user background image would not be visible when going into full screen
+ » Issue fixed related to Zine flash where the viewer would be incorrectly sized in some scenarios when starting on a specific page
+ » Issue fixed where going into full screen on iPad/iPhone would render a too large device view port
+ » Transitioning smoothness improved and a issue related to flickering on Chrome fixed
+
+
+July 2013
+ » Fixed an issue related to Safari and opening Zine in full screen
+ » Fixed an issue related to switching back and forth between Zine and portrait and having images and links on the same pages
+ » AdaptiveUI now supports printing in HTML5 split mode
+ » Issue related to hiding/showing annotations fixed
+ » Issue related to using the load method in flash mode for the annotations build fixed
+ » FlexPaper Desktop Publisher now allows the alpha to be changed on panels
+ » Random number added to the url for the resource files when publishing documents through FlexPaper Desktop Publisher, to avoid cache problems
+ » Zoom Panning in Safari for the HTML5 and HTML4 rendering modes further improved
+ » Issue related to text/link sizes in zoomed in mode for Zine on Safari fixed
+ » Previewing documents in FlexPaper Desktop Publisher improved in stability
+ » Mobile preview now available in Desktop Publisher (click on publish/view and then mobile preview after publishing has completed)
+ » Fixed an issue where images/links/video would disappear when zooming into content for FlexPaper Zine. This was affecting webkit based browsers
+ » Fixed an issue where printing in split mode for in Chrome (Pepper Flash) would not print all pages due to an issue in Pepper Flash's sandboxing limitations
+ » Fixed an issue related to mouse wheel & two finger scrolling in Mac
+ » Fixed an issue related to printing in HTML5 and the page not utilizing the full width of the print
+ » Print progress added for the HTML5 rendering mode
+ » Fixed an issue where the background image would not be visible in HTML5 mode for Zine
+ » Fixed an issue where the background image would not stretch in some scenarios when using flash mode
+ » Fixed an issue which prevented Flexpaper from being used in multiple instances when using the HTML5 rendering mode
+ » Fixed an issue where annotations on page 2 would not be visible initially in some specific scenarios, for the HTML5 viewer
+ » Optimizations for the upcoming version of iOS (version 7)
+ » HTML5 PDF rendering routine updated (0.8.320 build # 9ac2584)
+ » FlexPaper Classic now supports adding links, images and video on top of documents using the API as well as from Publisher!
+ » Fixed an issue related to starting youtube videos from the portrait mode
+ » Corrected an issue where it wasn't possible to create highlights in the annotations viewer on iPad by first selecting highlighting color
+
+
+June 2013
+ » Fix applied for onExternalLinkClicked which was not triggered properly from the HTML/HTML5 rendering mode.
+ » Panning accuracy when dragging Zine in flash mode improved
+ » Fixed an issue related to adjusting certain page sizes in IE 8, IE 7 for FlexPaper AdaptiveUI
+ » Corrected an issue related to iOS 6 and above which were not loading pages in zoomed in mode for Zine in scenarios where the document contained spaces
+ » Issue corrected where the print dialog would cause zoom right after clicking cancel or print for FlexPaper HTML/HTML5 mode
+ » Issue fixed releated to nav panels showing in 1-page documents for Zine in HTML/HTML5 mode
+ » Regression issue related to showing certain links in Zine HTML when supplying both a PDF and JSON file fixed
+ » Issue fixed related to even numbered documents not displaying the fisheye thumbnail on last page
+ » As the Safari browser does not support range requests, FlexPaper no longer tries to impose this on the Safari browser
+ » Issue fixed related to 'BookView' where the initial scale would be wrong and cause the page not to fit properly initially in some scenarios
+ » Issue fixed in java package related to locating the config file after saving
+ » FlexPaper Publisher changed to use split mode for the preview to keep memory down and provide further consistency between preview
+   the published copy
+ » Zine in flip book and Portrait mode for HTML/HTML5 adjusted to take page number into account when switching mode so that the viewere stays
+   on the current page
+ » Issue fixed for Zine in flash mode where zooming in using mouse down would not work for landscape documents in certain scenarios
+ » Android now defaults to 1-page mode if the phone or tablet is in portrait mode when entering the publication
+ » Fixed an issue where the full screen button wasnt bound on mobile for the FlexPaper classic viewer
+ » Fixed an issue related to text input fields in IE7 For FlexPaper Classic
+ » Issue fixed related to not binding the enter key to search in certain scenarios, for the customizable version of FlexPaper Classic
+ » HTML5 PDF rendering routine updated (0.8.187 build # 59f2e71)
+ » Fixed an issue related to white space being added to different size pages in Zine flip mode
+ » Added hash listener which makes the viewer navigate to a desired page through the use of #page in the url.
+   For example http://www.mydomain.com/flexpaper/viewer.php#page=5 navigates to page 5. This also works as a
+   starting parameter instead of using StartAtPage in your code. This works across all technologies (html/flash/html5)
+ » Corrected an isssue where the dispose method would not be exposed externally properly
+ » FlexPaper Publisher now asking for license key on startup to simplify the publishing process
+ » Bug related to resizing the flip book viewer in HTML/HTML5 mode corrected
+ » Added options for rasterization and text quality for FlexPaper Desktop Publisher
+ » Added button to publishing dialog for viewing the folder where files were published
+ » Publications in FlexPaper publisher now get their own folder per default
+ » FlexPaper Publisher now supports optimizing for PHP to provide JPEG and sliced high res JPEG images
+   when PHP is available
+ » Support for Google Analytics added to all builds through the "TrackingNumber" parameter. It currently tracks each
+   page view together with the document name
+ » Performance improved greatly in FlexPaper Publisher
+ » Zine now auto hides the toolbar to save space when viewing publications in single page mode on mobile devices
+ » Zine flash mode adjusted when hiding the thumbnails to allow the viewer to maximise the available area
+ » Support for background images added to FlexPaper Zine through FlexPaper Desktop Publisher
+ » Issue corrected for FlexPaper Desktop Publisher related to splitting pdfs with pdftk in OS X
+ » The FlexPaper PHP examples now support sub folders
+ » FlexPaper Desktop Publisher now supports adding images and video (Youtube videos)
+
+
+May 2013
+ » Bug fixed for IE in HTML mode when zoomDragMode (FlexPaper Zine) was set to false
+ » Fixed an issue related to 'BookView' and recreating annotations
+ » Issue fixed related to the text not being sharp when opening Zine in full screen for the HTML5 mode
+ » Improved script and css directory detection to better support moving the flexpaper js and css files
+ » Corrected an issue related to using the HTML5 split mode on touch devices
+ » Preloaders for the flip book aligned (html/html5/flash)
+ » Bug fixed for IE 8 and IE 7 in HTML mode for Zine when using customizable user interface
+ » Zine flash mode now displays search abstracts in split mode using a supplied JSON file
+ » Bug fixed for FlexPaper in flash mode where printing was causing extra margin to the left and AutoAdjustPrint wasn't working
+ » Annotations (flash mode) now supports different colors for notes (with a colorpicker)
+ » Zine flash mode in search mode optimized further for higher performance
+ » Corrected an issue where IE 8 and other HTML5 unsupported browsers would try to use the HTML5 rendering mode
+ » A few extra checks for the ASP.NET package added to verify that pdf2swf and pdf2json can write to disk
+ » Corrected an issue related to drawings in flash mode which were created in html mode
+ » Corrected an issue related to drawings being created without '#' in front of color causing them to turn black
+ » Zine for iPhone now showing white background properly when displaying flip book in single page mode
+ » Issue corrected for Zine in single page mode (iPhone mode) where page number wasnt being displayed properly
+ » Zine now supports thumbnails (with zoom effect) in HTML mode for IE 9, IE 10
+ » PHP scripts for FlexPaper Zine updated to support loading sliced high resolution images.
+ » Offset issue corrected for the fisheye icons in Zine (HTML/HTML5 mode)
+ » Size margins adjusted for Zine in HTML mode, as the horizontal scroll bars did not show in portrait mode while using Zine
+ » Issue fixed where the Zoom scale wasn't updated properly when navigating out of Zoomed in mode with nav buttons (in HTML/HTML5 mode for Zine)
+ » HTML5 rendering routine updated (0.8.75 build # ff616c8)
+ » FlexPaper Publisher Installer updated for Mac to include third party executable utilities. Mac OS X 10.6 or higher required.
+   The third party executables can also be downloaded from https://code.google.com/p/flexpaper-desktop-publisher/downloads/list
+   or using MacPorts (as previously mentioned) with the following command
+   sudo port install swftools pdfjson pdftk mupdf
+ » The HTML5 rendering mode now supports progressive loading when range request headers are supported by the web server except
+   when using an iOS device. Range requests are not supported by iOS.
+ » Issue corrected for the annotations asp.net setup package where wrong connection string was used to set up the sample database
+ » PHP scripts now updated to use JPEG as opposed to PNG for Zine in HTML mode
+ » Corrected an issue for 'BookView' where it wasn't possible to add notes on top of text
+ » Issue corrected for FlexPaper Desktop Publisher where previewing a document with more than 10 pages caused some of the pages to render incorrectly
+   in preview mode
+ » Major performance improvement for Zine in HTML mode making it possible to render very large publications on low memory devices
+ » Fixed an issue with links and HTML5 running split mode
+ » FlexPaper Zine now features the ability to add links to URL's and pages through its config file.
+   FlexPaper publisher for Zine has been updated to support this
+ » Issue fixed for clicking on thumbnails in iOS
+
+
+March 2013
+ » HTML5 rendering routine updated (0.7.250)
+ » HTML5 rendering routine compressed another 400 kb to 865 kb
+ » Improved stability in turning pages quickly for Zine HTML/HTML5 modes
+ » Split mode now fully supported in Zine HTML5 mode to reduce bandwidth consumption. Publications are typically split with a tool like pdftk:
+   pdftk.exe Paper.pdf burst output Paper_%02d.pdf compress
+   The HTML5 rendering mode will use split mode if the following syntax is used when supplying the PDFFile parameter: [*,padding] where padding
+   is the minimum number of digits in the number with zeros's (0) used to fill. For example a document split into
+   Paper_01.pdf, Paper_02.pdf .. Paper_99.pdf, will use the following syntax:
+   PDFFile : 'Paper_[*,2].pdf',
+ » PHP and ASP.NET sample updated to support HTML5 split mode with support for PDFtk as suggested utility for this
+ » Performance improvements for Zine (flip book reader) in HTML5 mode
+ » Zine in HTML5 mode now uses image thumbnails if they are supplied, to avoid excessive rendering
+ » Issue corrected for Safari in Zine (in flip book reader) where the cursor would position itself incorrectly when Zooming in
+ » Issue corrected for Zine (in flip book reader) in HTML/HTML5 mode affecting search where the first hit would not always be found
+ » Corrected an issue related to text fragments being used from the pdf rather from json file in HTML5 split mode
+ » Left and right panels in HTML/HTML5 mode for zine (in flip book reader) now clickable as in flash version
+ » Improved performance in rescaling Zine (in flip book reader) in HTML/HTML5 mode using the slider
+ » jQuery upgraded to 1.9.1 for FlexPaper Classic and FlexPaper Zine
+ » Corrected an issue related to left and right panels in HTML/HTML5 (in flip book reader) mode where they would not show in certain sizes
+ » Fixed an issue in Zine/HTML/HTML5 portrait mode where the next button would not work in some scenarios
+ » Search abstracts expanding to the left of the flip book viewer now available in the HTML/HTML5 reader
+ » Various corrections for FlexPaper annotations BookView mode (InitViewMode : 'BookView')
+ » Corrections for viewing annotations in full screen where the toolbar wouldn't show in some cases
+ » The HTML mode for the Zine flip book now supports rendering high resolution images when zoomed in with support for sliced pages to optimize download speed and quality
+ » Correction for the PHP setup package which causes errors in some file names with spaces in them
+ » Zine web server package now includes a java backend example
+ » Correction for customizable UI in flash mode where the slider was not reacting when sliding quickly to the low end of the slider
+ » Correction for annotations where annotations would disappear when switching back and forth between two page and portrait
+ » Reading more improved for iPhone in Zine flip HTML/HTML5 view
+ » Fix applied for Zine (flash version) to better manage differently sized pages
+ » FlexPaper Publisher now available to Mac users! Make sure the following tools are installed prior to installing FlexPaper Publisher
+   if you want to be able to use the full range of formats:
+   1) Install MacPorts http://www.macports.org/
+   2) From the command line, install the following ports:
+      swftools, pdf2json, pdftk, mupdf (you can use the following command to do this: sudo port install swftools pdfjson pdftk mupdf)
+
+
+February 2013
+ » Fix for hovering in FlexPaper Zine HTML to allow the user to hover the entire width of the document
+ » Zine now allowing mouse down/drag interaction in both flash and html mode as opposed to mouse move when reading in zoomed in mode
+   set the zoomDragMode attribute to true in the <general> node of your UI config file to enable this
+ » HTML5 now supports split mode if a json file is provided
+ » A Java back-end admin console now added for FlexPaper accross all builds
+ » Native kinetic scrolling implemented for annotations and jQuery upgraded for the FlexPaper Annotations viewer
+ » Issue fixed related to the php setup package and its ability to alter the config file in certain environments
+ » Issue related to split json files fixed for flash viewer
+ » FlexPaper desktop publisher updated to use split mode for publications larger than 500 kb
+ » Selections on iPad are now created by holding down the finger just as any other normal document (affecting annotations + viewer)
+ » Search result text now localizable in AdaptiveUI
+ » Switching from portrait to landscape in touch devices improved for Zine
+ » FlexPaper Zine now works for IE8, IE7 even if flash is not present
+ » FlexPaper Zine HTML5/HTML now loading +- 4 pages in range
+ » Bug fix for Safari in HTML mode for Zine where certain aspects were not being reset properly after zooming
+ » Corrections for the ASP.NET setup
+
+January 2013
+ » Rotate functionality added for the HTML viewer
+ » Fisheye thumbnails now added for HTML mode for FlexPaper Zine
+ » Ability to add new custom buttons added for FlexPaper Zine
+ » Ability to disable the fisheye thumbnails in the customization XML file for FlexPaper Zine
+ » New viewer mode added for the flash viewer: CADPage showing a navigational thumb nail in the bottom right corner of the viewer
+ » Issue related to beginning in portrait for FlexPaper Zine fixed
+ » Issue related to zooming into HTML mode for FlexPaper Zine in relative positioned elements fixed
+ » Improved shading when turning pages in HTML mode for FlexPaper Zine
+ » Fixed an issue related to disposing dom nodes in FlexPaper Zine causing some pages to disappear when flipping page in HTML mode
+ » Fixed an issue where zooming in quickly would result in one of the pages not rendering in FlexPaper Zine
+ » Added the ability to position toolbar at bottom of viewer for FlexPaper Zine.
+ » Two new settings added to the desktop general node of the customization config file for FlexPaper Zine: selectionColor and rollOverColor
+ » Improved support for IE 8, IE 7 in HTML rendering mode
+ » Fixed an issue related to switching back out of fullscreen in FlexPaper Zine where the viewer would not readjust in certain situations
+ » Fixed an inconsistency in page number in FlexPaper Zine HTML version
+ » Fixed issue related to StartAtPage for FlexPaper Zine HTML version
+ » Added new settings for FlexPaper Zine: navPanelsVisible, fitModeScale, fitModeScaleMargin
+ » Thumb images in Zine HTML mode will adapt to a lower resolution in PHP
+ » HTML5 rendering routine updated
+ » Flash viewer updated to support split JSON files for searching
+ » Fixed an issue related to internal and external links when rendering in HTML5 mode
+ » Issue fixed for landscape documents where they would not fit to width in certain cenarios for the HTML rendering mode
+ » Issue fixed related to printing a page range in HTML and HTML5 rendering mode
+ » Fixed an issue related to the onViewModeChanged event in HTML mode where the view mode was not passed through
+ » SinglePage added to the HTML viewing mode
+ » AdaptiveUI now auto resizes to fit screen if any of the sizes of the viewer are set in %
+ » Fixed an issue related to odd pages showing in two-page mode where the second page would be visible even if it does not exist
+ » The flash viewer can now be supplied with IMGFiles and JSONFile just as the html viewer. It will use teh IMGFiles if SwfFile is missing
+ » Java example files (see java/FlexPaper.war) included for publishing with FlexPaper from for example Apache Tomcat (only available for commercial packages at the moment)
+
+November 2012
+ » Fix for annotations in HTML mode where the onMarkChanged event would not attach the mark object
+ » Implemented native custom cursors for the flash viewers, speeding up the custom cursors significantly
+ » Fixed an issue related to Safari for FlexPaper Zine when running in HTML mode where the size would be incorrect when zooming out
+ » An issue related to clicking documents from the admin console which failed to work in certain browsers fixed
+ » "Loading Publication" now localizable
+ » Fix for FlexPaper flash where last page would not appear as current even when scrolled to bottom in portrait ( in certain scenarios )
+ » Double tapping should now work on Android based devices for Zine publications
+ » Fix for FlexPaper Zine which should make the HTML version fit better to the size of its container
+ » Improved accuracy of page turning in html mode as well as the speed for zooming out when pinching
+ » Improved style for the loader in HTML mode
+ » Fixed an issue in FlexPaper Zine where the order of the tools was not taken into consideration in HTML mode
+ » Fixed an issue related to the tooltips for full screen and two page view in Zine mode
+ » Fixed an issue related to allowing searching split documents in flash using a supplied JSON file
+ » Issue fixed related to Safari and clicking internal links in HTML mode fixed for FlexPaper Zine
+
+November 2012
+ » Issue related to hovering links in HTML mode fixed (standard viewer & zine)
+ » Issue related to user input in full screen for chrome fixed
+ » Annotations now follow into full screen mode (annotations viewer)
+ » Annotations toolbar can now be hidden using the parameter 'AnnotationToolsVisible'
+ » HTML5 rendering routine updated
+ » Issue related to annotations in two page mode where the scroll bars were incorrectly initialised fixed
+
+October 2012
+ » Issue related to an update to flash player 11.4 causing cursor lag in the viewer fixed
+ » Searching in split mode improved significantly
+ » Correction for the load method which was not getting exposed properly after minification of HTML viewer
+ » Correction for incorrectly sized backgrounds in split mode (flash viewer)
+ » Issue releated to repositioning & sizing after full screen corrected
+ » Internal links for HTML5 now working properly
+ » HTML5 rendering routine updated
+ » HTML viewing mode now supporting split json files providing the ability to serve much larger documents more efficient
+ » Bug fixed for IE in relation to scrolling to specific pages which was appearing in some specific cases for the HTML viewer
+ » Bug corrected for IE9 where it was not loading HTML rendering mode in certain scenarios
+ » Issue related to printing in IE 9 in HTML mode corrected
+
+October 2012
+ » Issues related to full screeen resizing corrected
+ » Serveral localization issues corrected
+ » FlexPaper now behaves as a jQuery plugin with events dispatching from its main HTMLElement node
+ » Serveral minor issues corrected
+ » Issue releated to searchserviceurl now fixed
+
+August 2012
+ » Issue related to using next button where navigating next failed to work in certain situations fixed
+ » True full screen implemented for the browsers that support it (AdaptiveUI, Zine)
+ » Animated zoom added for FlexPaper Zine (HTML version)
+ » Pinch to zoom added for FlexPaper Zine
+ » "loading publication" misaligned for IE has been fixed
+ » Fix for height of the print dialog to fit entire contents
+ » load method modified so that it accepts either a url or a javascript object containing the suggested parameters (e.g. $FlexPaper('documentViewer').load({PDFFile : 'pdf/Paper.pdf'}))
+ » Fixed an issue relating to the slider being re-initialized improperly on switching modes causing the slider to shrink in range
+ » Fixed an issue relating to IE not allowing documents to be dragged in single page mode
+ » resize function added for the viewer, takes width & height as arguments. These arguments can be %
+
+July 2012  (AdaptiveUI Version 1.6.1)
+ » HTML5 document rendering routine updated (AdaptiveUI, Zine)
+ » Various general performance improvements for flipping between pages in HTML mode (FlexPaper Zine)
+ » Improved scrolling performance significantly for HTML4 panning in touch devices (FlexPaper Zine)
+ » IE 9 & IE 10 now supporting HTML5 rendering mode (FlexPaper Zine & Standard Build)
+ » Now supporting IE9 in Zine flip mode (FlexPaper Zine)
+ » Click-Zoom added for HTML mode (FlexPaper Zine)
+
+14 July 2012 (AdaptiveUI Version 1.5.9)
+ » PanelColor and BackgroundColor was not getting honored in HTML/HTML5 version (FlexPaper Zine)
+ » Correction for textoverlay for FlexPaper Zine which was causing some documents to misalign   
+
+3 July 2012 (AdaptiveUI Version 1.5.8)
+ » Correction of InitViewMode default value which didnt get set properly  (FlexPaper Zine)
+ » Correction where print dialog was not closing properly after print/cancel
+ » HTML5 document rendering routine updated
+ » Desktop user interface and mobile user interface enhanced  (FlexPaper Zine)
+ » New page curl/page flip effect implemented for HTML5 (FlexPaper Zine)   
+ » Initial loading dialog added
+ » Issue related to navigating to last page from thumb view corrected
+ » Issue related to using the text field to navigate to pages on touch devices causing incorrect page to show after second attempt corrected  
+ » Two-page mode added for Internet Explorer
+ » Thumb view added for Internet Explorer
+    
+15 June 2012 (AdaptiveUI Version 1.5.7)
+ » Peformance improvements accross the whole viewer
+ » Normal text selections for annotations disabled for touch devices to avoid interfering with navigation in document 
+ » Portrait added to annotations build. 
+ » Some interaction issues related to dragging notes on touch devices corrected
+ » Corrected an issue related to the wrong viewmode button not lighting up properly.
+ » Issue related to scrollbars and overflowing labels affecting internet explorer corrected 
+
+10 June 2012 (AdaptiveUI Version 1.5.6)
+ » Issue related to the load method corrected.
+ » New parameter added "localeDir" which can be used to specify from which directory to load locale
+ » Changed the zoomed-in two page mode not to animate when flicking pages as it was affecting performance negatively. 
+ » Corrected so that RenderingOrder now allows single entries (such as "html" alone)
+ » HTML viewer now fully supports multiple instances on the same page
+ » New dispose method added which is to be used whenever a viewer is to be destroyed to safely remove all event handlers
+ » Discrepancies in onCurrentPageChanged corrected for touch devices in portrait mode and twopage mode  
+   
+4 June 2012 (AdaptiveUI Version 1.5.5)
+ » HTML version now supporting the same locale set as FlexPaper flash version through the use of the localeChain parameter
+ » Bug preventing prevPage not to access first page when going from page 2 corrected
+ » Added extra check for upload size, for the php setup script 
+ » Issue corrected for documents with odd pages affecting last page of the two-page mode
+ » Portrait mode added back for iOS devices, now using jScrollPane which has been confirmed to circumvent the Apple Safari crashing issue
+ » Issue releated to two-page for iOS 4.2 and earlier corrected
+ » Print dialog added supporting range, all and specific pages just as the flash vierwer.
+ » Fix for two-page view applied for flash
+ » Two-page now supports vertical and horizontal panning in HTML mode 
+ » Issue related to StartAtPage fixed 
+
+25 May 2012 (Version 1.5.1)
+ » Corrected the cross media format check (flash/html) so that it only affects notes and drawings (as only they have x/y coordinates)
+ » Correcte an issue related to drawing over highlights which was affecting Google Chrome
+ » Added a new parameter "StickyTools" to set tool buttons not to pop up after a tool has been used 
+
+23 May 2012 (Version 1.5.0)
+ » Added new setup guide for PHP together with administrative user interface for uploading and viewing documents.
+ » Support for JSONP added allowing documents to be loaded from other domanis than where the viewer is located. PHP example updated.
+
+26 Apr 2012 (Version 1.4.5)
+ » Several scroll bar issues corrected 
+ » Issue related to navigating to last page in single mode by entering the page number in the text field corrected
+ » 'Old' two-page mode introduced. New viewing mode added 'BookView' which behaves more like a book.  
+ » Corrected and improvements serveral related to navigating next/prev in two-page mode
+ » issue related to the load method corrected.  
+ 
+16 Apr 2012 (Version 1.4.3)
+ » All css classes used by flexpaper now prefixed with flexpaper_ to avoid conflicts
+ » General clean up of css rules
+ » Style aligned more with our flash viewer, user interface should be clearer and more easily readable now
+ » Minor corrections for going from thumb mode to twopage in iOS devices 
+ » jQuery.noConflict() now supported
+ » Improved stability text selections in MSIE  
+  
+06 Apr 2012 (Version 1.4.2)
+ » Swiping improved to be less sensitive
+ » Corrected scenario where certain pages were overlapping in two-page mode
+ » Pages in landscape mode for two page in non-touch and touch devices corrected
+  
+04 Apr 2012	(Version 1.4.1)
+ » Numerous fixes for iPad to improve stability 
+ » Improved two-page mode for ipad to allow double tapping to zoom and pan documents
+ » Two page mode now allowing zoom using slider on non touch devices  
+ » Fix for search when searching in very large zoomed in mode causing search to fail
+
+28 Mar 2012 (Version 1.3.8)
+ » Regression issue affecting Android and older iOS versions corrected
+ » Corrected issue related to the fitPageOnLoad parameter 
+ 
+13 Mar 2012 (Version 1.3.7)
+ » Text can now be selected and copied on iPad/touch devices 
+ » Two page mode now allowing search
+ » Two page now showing loader (spinner) before page loads properly. 
+ » Issue related to iPad causing crashes in specific scenarios corrected. 
+  
+13 Jan 2012 (Version 1.3.0)
+ » Split file loading now fully supported
+ » Issue related to jsDirectory corrected 
+  
+8 Jan 2012 (Version 1.2.9)
+ » Zoom slider corrected for IE8
+ » Now supporting internal and external links
+ » Flash issue related to using $FlexPaper('id') corrected
+ » key now passed in full screen
+ » Two page corrected in how it is calculated in size     
+ 
+2 Jan 2012 (Version 1.2.8)
+ » Loader spinner corrected for two-page mode
+ » jsDirectory now honored in full page mode
+ » wmmode added to flash viewer
+ » Text selection corrected for two-page mode

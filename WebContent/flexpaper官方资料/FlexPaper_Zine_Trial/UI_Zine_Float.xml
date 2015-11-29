@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlexPaper_Zine_UIConfiguration>
+    <desktop>
+        <general
+                imageAssets="assets_zine/"
+                backgroundColor="#444444"
+                panelColor="#777777"
+                backgroundAlpha="0"
+                enableFisheyeThumbnails="true"
+                selectionColor="#AAAAAA"
+                rollOverColor="#999999"
+                fitModeScale="0.85"
+                flipSpeed="fast"
+                fitModeScaleMargin="-0.1"
+                navPanelsVisible="true"
+                navPanelBackgroundAlpha="0"
+                navPanelFirstPageButtonVisible="false"
+                navPanelLastPageButtonVisible="false"
+                glow="true"
+                zoomDragMode="true" />
+
+        <toolbar 	height="50"
+                    width="100%"
+                    paddingTop="15"
+                    paddingLeft="15"
+                    paddingRight="15"
+                    paddingBottom="10"
+                    backgroundColor="#777777"
+                    borderColor="#777777"
+                    borderStyle="solid"
+                    borderThickness="1"
+                    cornerRadius="0"
+                    horizontalAlign="center"
+                    location="float"
+                    visible="true">
+
+            <element type="button" id="bttnPrint" icon_width="14" icon_height="13" visible="true" />
+            <element type="button" id="bttnDownload" icon_width="11" icon_height="13" visible="true" />
+
+            <element type="button" id="bttnBookView" height="19" icon_width="21" icon_height="13" paddingLeft="30" />
+            <element type="button" id="bttnSinglePage" height="19" paddingLeft="0" icon_width="10" icon_height="13" paddingRight="30"  />
+
+            <element type="slider" id="zoomSlider" height="11" width="80" />
+            <element type="textinput" id="txtZoomFactor" height="19" width="32" />
+            <element type="button" id="bttnFullscreen" width="14" height="19" icon_width="14" icon_height="13" paddingRight="30" />
+
+            <element type="button" id="bttnPrevPage" icon_width="13" icon_height="13"  height="20" width="15"  />
+            <element type="textinput" id="txtPageNumber" height="19" width="25" />
+            <element type="label" id="lblTotalPages" paddingTop="1" />
+            <element type="button" id="bttnPrevNext" icon_width="13" icon_height="13" height="19" width="15" paddingRight="30"/>
+
+            <element type="button" id="bttnTextSelect" icon_width="16" width="15" icon_height="15"/>
+            <element type="button" id="bttnHand" height="19" width="15" icon_width="16" icon_height="15" paddingRight="40" />
+
+            <element type="textinput" id="txtSearch" heigh="19" width="40" />
+            <element type="button" id="bttnFind" height="19" width="25" icon_width="13" icon_height="13"  />
+
+            <element type="progress" id="progressLoading" />
+        </toolbar>
+    </desktop>
+    <tablet>
+        <general backgroundColor="#444444" imageAssets="assets_zine/mobile/" zoomDragMode="true" navPanelBackgroundAlpha="0" />
+        <toolbar backgroundColor="#444444">
+            <element type="button" id="bttnPrint" icon_height="39" icon_width="39" visible="false" />
+            <element type="button" id="bttnBookView" icon_height="39" icon_width="39" />
+            <element type="button" id="bttnSinglePage" icon_height="39" icon_width="39" />
+            <element type="button" id="bttnThumbView" icon_height="39" icon_width="39" visible="false" />
+            <element type="button" id="bttnZoomIn" icon_height="39" icon_width="39" />
+            <element type="button" id="bttnZoomOut" icon_height="39" icon_width="39" />
+            <element type="button" id="bttnFullScreen" icon_height="39" icon_width="39" visible="false" />
+            <element type="button" id="bttnPrevPage" icon_height="39" icon_width="39" />
+            <element type="textinput" id="txtPageNumber" readonly="false"/>
+            <element type="label" id="lblTotalPages" />
+            <element type="button" id="bttnPrevNext" icon_height="39" icon_width="39" />
+            <element type="textinput" id="txtSearch" visible="true" />
+            <element type="button" id="bttnFind" icon_width="39" icon_height="39" visible="true" />
+        </toolbar>
+    </tablet>
+    <mobile>
+        <general backgroundColor="#444444" imageAssets="assets_zine/mobile/" zoomDragMode="true" navPanelBackgroundAlpha="0" />
+        <toolbar backgroundColor="#444444">
+            <element type="button" id="bttnPrint" icon_height="39" icon_width="39" visible="false" />
+            <element type="button" id="bttnBookView" icon_height="39" icon_width="39" visible="false"  />
+            <element type="button" id="bttnSinglePage" icon_height="39" icon_width="39" visible="false"  />
+            <element type="button" id="bttnThumbView" icon_height="39" icon_width="39" visible="false" />
+            <element type="button" id="bttnZoomIn" icon_height="39" icon_width="39" />
+            <element type="button" id="bttnZoomOut" icon_height="39" icon_width="39" />
+            <element type="button" id="bttnFullScreen" icon_height="39" icon_width="39" visible="false" />
+            <element type="button" id="bttnPrevPage" icon_height="39" icon_width="39" />
+            <element type="textinput" id="txtPageNumber" readonly="false" visible="true" />
+            <element type="label" id="lblTotalPages" visible="true" />
+            <element type="button" id="bttnPrevNext" icon_height="39" icon_width="39" />
+            <element type="textinput" id="txtSearch" visible="false" />
+        </toolbar>
+    </mobile>
+</FlexPaper_Zine_UIConfiguration>
